@@ -35,7 +35,7 @@ namespace Figure_Assignment
                             if ((a + c) % 2 == 0)
                             {
                                 Console.Write("+ ");
-                                Thread.Sleep(100);
+                                Thread.Sleep(10);
                             }
                             else
                             {
@@ -47,6 +47,40 @@ namespace Figure_Assignment
 
                     Console.WriteLine();
                 }
+            }
+
+
+            //ChessBoard below 
+            for (int a = 0; a < height; a++)
+            {
+
+                for (int b = 0; b < height; b++)
+                {
+
+                    for (int c = 0; c < height; c++)
+                    {
+                        for (int d = 0; d < height; d++)
+                        {
+                            
+
+                            if ((a + c) % 2 == 0)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Gray;
+                                Console.BackgroundColor = ConsoleColor.Gray;
+                                Console.Write("+ ");
+                                Thread.Sleep(10);
+                            }
+                            else
+                            {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.Write("  ");
+                            }
+                        }
+                    }
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine();
+                }
+                Console.ResetColor();
             }
         }
     }
